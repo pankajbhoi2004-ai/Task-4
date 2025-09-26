@@ -11,3 +11,53 @@ nav ul {
 img {
   width: 600px;
 }
+/* Base styles (Desktop-first) */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.column {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Media Query for devices with width ≤ 768px */
+@media (max-width: 768px) {
+  .column {
+    width: 100%;     /* Stack columns vertically */
+    float: none;
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav vertically */
+    padding: 0;
+  }
+
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;     /* Responsive images */
+    height: auto;
+  }
+}
+
